@@ -1,5 +1,5 @@
 import { createClient } from "@vercel/kv";
-import { generateUploadUrl } from "@vercel/blob";
+import { put } from "@vercel/blob";
 import crypto from "crypto";
 
 var kv = createClient({
@@ -34,14 +34,25 @@ export default async function handler(req, res) {
         var body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
         var filename = body.filename;
         var contentType = body.contentType;
-        if (!filename || !contentType) {
-          return jsonResponse(res, { error: "Missing filename or contentType" }, 400);
+        var fileData = body.fileData; // base64 string from client
+
+        if (!filename || !contentType || !fileData) {
+          return jsonResponse(res, { error: "Missing filename, contentType, or fileData" }, 400);
         }
-        var { url } = await generateUploadUrl({ access: "public" });
-        jsonResponse(res, { uploadUrl: url });
+
+        // Convert base64 string to Buffer
+        var buffer = Buffer.from(fileData, "base64");
+
+        var blob = await put(filename, buffer, {
+          access: "public",
+          addRandomSuffix: true,
+          contentType,
+        });
+
+        jsonResponse(res, { blobUrl: blob.url });
       } catch (error) {
-        console.error("Error creating upload URL:", error);
-        jsonResponse(res, { error: "Failed to create upload URL" }, 500);
+        console.error("Error uploading file:", error);
+        jsonResponse(res, { error: "Failed to upload file" }, 500);
       }
       break;
 
