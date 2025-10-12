@@ -1,46 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Lûddiele — share audio & videos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Poppins font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
+  <meta charset="utf-8" />
+  <title>Lûddiele — share audio & videos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+/* (Your existing CSS here - Omitted for brevity, but include it in your file) */
 *{
-    margin: 0;
-    padding: 0;
-    font-family:'poppins' , sans-serif;
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'poppins' , sans-serif;
+    box-sizing: border-box;
 }
 a{
-    text-decoration: none;
-    color: #5a5a5a;
+    text-decoration: none;
+    color: #5a5a5a;
 }
 
 img{
-    cursor: pointer;
+    cursor: pointer;
 }
 
 .flex-div{
-     display: flex;
-     align-items: center;
+     display: flex;
+     align-items: center;
 
 }
 nav{
-    padding: 0px 2%;
-    justify-content: space-between;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    padding: 0px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 
 .nav-right img{
-    width: 25px;
-    margin-right: 25px;
+    width: 25px;
+    margin-right: 25px;
 }
 
 .nav-right .user-icon{
@@ -51,47 +51,47 @@ border-radius: 50%;
 }
 
 .nav-left .menu-icon{
-    width: 22px;
-    margin-right: 25px;
+    width: 22px;
+    margin-right: 25px;
 
 }
 
 .nav-left .logo{
-    width: 130px;
+    width: 130px;
 
 }
 
 .nav-middle .mic-icon{
-    width: 16px;
+    width: 16px;
 
 }
 .nav-middle .search-box{
-    border: 1px solid #ccc;
-    margin-right: 15px;
-    padding: 8px 12px;
-    /* border-radius: 25px; */
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px 12px;
+    /* border-radius: 25px; */
 }
 
 .nav-middle .search-box input{
-    width: 400px;
-    border: 0;
-    outline: 0;
-    background: transparent;
+    width: 400px;
+    border: 0;
+    outline: 0;
+    background: transparent;
 }
 .nav-middle .search-box img{
-    width: 15px;
-   
+    width: 15px;
+   
 }
 
 /* sidebar */
 .sidebar{
-    background: #fff;
-    width: 15%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    padding-left: 2%;
-    padding-top: 98px;
+    background: #fff;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-left: 2%;
+    padding-top: 98px;
 
 }
 
@@ -101,814 +101,781 @@ margin-right: 20px;
 }
 
 .shortcut-links a{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    width: fit-content;
-    flex-wrap: wrap;
-    margin-top: 13px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+    margin-top: 13px;
 }
 
 
 .shortcut-links a:first-child{
-    color: #ed3833;
+    color: #ed3833;
 }
 
 .sidebar hr{
-    border: 0;
-    height: 1px;
-    background: #ccc;
-    width: 85%;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    width: 85%;
 }
 .subscribed-list h3{
-    font-size: 13px;
-    margin: 20px 0;
-    color: #5a5a5a;
+    font-size: 13px;
+    margin: 20px 0;
+    color: #5a5a5a;
 }
 .subscribed-list a{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    width: fit-content;
-    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
 }
 .subscribed-list a img{
-    width: 25px;
-    border-radius: 50%;
-    margin-right: 28px;
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 28px;
 }
 
 
 .small-sidebar{
-    width: 5%;
+    width: 5%;
 }
-.small-sidebar .shortcut-links a p  , .small-sidebar .subscribed-list a , .small-sidebar h3{
-    display: none;
+.small-sidebar .shortcut-links a p  , .small-sidebar .subscribed-list a , .small-sidebar h3{
+    display: none;
 }
 
 .small-sidebar hr{
-    width: 50%;
-    margin-bottom: 25px;
-    display: none;
+    width: 50%;
+    margin-bottom: 25px;
+    display: none;
 
 }
 /* main Body */
 .container{
-   background: #f9f9f9;
-   padding-left: 17%;
-   padding-right: 2%;
-   padding-top: 20px;
-   padding-bottom: 20px;
+   background: #f9f9f9;
+   padding-left: 17%;
+   padding-right: 2%;
+   padding-top: 20px;
+   padding-bottom: 20px;
 }
 .large-container{
-    padding-left: 7%; 
+    padding-left: 7%; 
 }
 .banner{
-    width: 100%;
-    display: none;
+    width: 100%;
+    display: none;
 }
 
 .banner img{
-    width: 100%;
-    border-radius: 8px;
+    width: 100%;
+    border-radius: 8px;
 }
 
 
 .list-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-column-gap: 16px;
-    grid-row-gap: 30px;
-    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 15px;
 }
 
 .vid-list .thumbnail{
-   width: 100%;
-   border-radius: 5px;
+   width: 100%;
+   border-radius: 5px;
+   aspect-ratio: 16/9; /* For better audio thumbnail display */
+   object-fit: cover;
+   background: #333; /* Default for audio */
 
 }
 .vid-list .flex-div{
-    align-items: flex-start;
-    margin-top: 7px;
+    align-items: flex-start;
+    margin-top: 7px;
 }
 
 .vid-list .flex-div img{
-    width: 35px;
-    margin-right: 10px;
-    border-radius: 50%;
+    width: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
 }
 
 .vid-info{
-    color: #5a5a5a;
-    font-size: 13px;
+    color: #5a5a5a;
+    font-size: 13px;
 
 }
 
 .vid-info a{
-    color: black;
-    font-weight: 600;
-    display: block;
-    margin: bottom 5px;;
+    color: black;
+    font-weight: 600;
+    display: block;
+    margin: bottom 5px;;
 }
 
 
 @media (max-width: 900px) {
-    .menu-icon{
-        display: none;
-    }
+    .menu-icon{
+        display: none;
+    }
 
-    .sidebar{
-        display: none;
-    } 
+    .sidebar{
+        display: none;
+    } 
 
-   .container, .large-container{
-       padding-left: 5%;
-       padding-right: 5%;   
-   }
+   .container, .large-container{
+       padding-left: 5%;
+       padding-right: 5%;   
+   }
 
-   /* .nav-right img{
-  
-    display: none;
-   } */
+   /* .nav-right img{
+  
+    display: none;
+   } */
 
-   .nav-right .user-icon{
-       display: block;
-       width: 30px;
-   }
+   .nav-right .user-icon{
+       display: block;
+       width: 30px;
+   }
 
-   .nav-middle .search-box {
-       width: 100px;
-       display: none;
+   .nav-middle .search-box {
+       width: 100px;
+       display: none;
 
-   }
+   }
 
-   .nav-middle .mic-icon{
-       display: none;
-   }
+   .nav-middle .mic-icon{
+       display: none;
+   }
 
-   .logo{
-       width: 90px;
-   }
+   .logo{
+       width: 90px;
+   }
 
 }
 
-/*******      Video -9      *****/
+/*******      Video -9      *****/
 
 
 .play-container{
-    padding-left: 2% !important;
+    padding-left: 2% !important;
 }
 
 .row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
 }
 .play-video{
-    flex-basis: 69%;
+    flex-basis: 69%;
 }
 
 .right-sidebar{
-    flex-basis: 30%;
+    flex-basis: 30%;
 }
 
-.play-video video{
-    width: 100%;
+.play-video video, .play-video audio{
+    width: 100%;
 }
 .side-video-list{
 
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }
 
 .side-video-list img{
-    width: 100%;
-
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background: #555;
 }
 .side-video-list .small-thumbnail{
-    flex-basis: 49%;
+    flex-basis: 49%;
 
 }
 
 .side-video-list .vid-info{
 
-    flex-basis: 49%;
+    flex-basis: 49%;
 }
 
 .play-video .tags a{
-   
-    color: #0000ff;
-    font-size: 13px;
+   
+    color: #0000ff;
+    font-size: 13px;
 }
 
 .play-video h3{
-    font-weight: 600;
-    font-size: 22px;
-    margin-top: 12px;
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: 12px;
 }
 
 .play-video .play-video-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 5px;
-    font-size: 14px;
-    color: #5a5a5a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #5a5a5a;
 }
 
 .play-video .play-video-info a img{
-    width: 20px;
-    margin-right: 8px;
+    width: 20px;
+    margin-right: 8px;
 
 }
 
 .play-video .play-video-info a{
-    display: inline-flex;
-    align-items: center;
-    margin-left: 15px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
 
 }
 
 .play-video hr{
-    border: 0;
-    height: 1px;
-    background: #ccc;
-    margin: 10px 0;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
 }
 
 .owner{
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .owner div{
-    flex: 1;
-    line-height: 18px;   
+    flex: 1;
+    line-height: 18px;   
 }
 
 .owner img{
-    width: 40px;
-    border-radius: 50%;
-    margin-right: 15px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
 .owner p{
-    color: #000;
-    font-weight: 600;
-    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 
 .owner span{
-    font-size: 13px;
-    color: #5a5a5a;
+    font-size: 13px;
+    color: #5a5a5a;
 }
 
 
 .owner button{
-    background: #ed3833;
-    color: #fff;
-    padding: 8px 30px;
-    border: 0;
-    outline: 0;
-    border-radius: 4px;
-    cursor: pointer;
+    background: #ed3833;
+    color: #fff;
+    padding: 8px 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .vid-des{
-    padding-left: 55px;
-    margin: 15px 0;
+    padding-left: 55px;
+    margin: 15px 0;
 }
 
 .vid-des p{
-    
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #5a5a5a;
+    
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #5a5a5a;
 }
 
 .vid-des .cmnt{
-    display: flex;
-    margin-top: 15px;
+    display: flex;
+    margin-top: 15px;
 }
 .cmnt img{
-    width: 24px;
-    height: 17px;
-    margin-left: 46px;
-    margin-right: 14px;
+    width: 24px;
+    height: 17px;
+    margin-left: 46px;
+    margin-right: 14px;
 }
 
 .vid-des h4{
-    font-size: 14px;
-    color: #5a5a5a;
-    /* margin-top: 15px; */
+    font-size: 14px;
+    color: #5a5a5a;
+    /* margin-top: 15px; */
 }
 
 .add-cmnt{
-    display: flex;
-    align-items: center;
-    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
 }
 
 .add-cmnt img{
-    width: 35px;
-    border-radius: 50%;
-    margin-right: 15px;
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
 .add-cmnt input{
-    border: 0;
-    outline: 0;
-    border-bottom: 1px solid #5a5a5a;
-    width: 100%;
-    padding-top: 10px;
-    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #5a5a5a;
+    width: 100%;
+    padding-top: 10px;
+    background: transparent;
 }
 
 .old-cmnt{
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
 }
 
 .old-cmnt img{
-    width: 35px;
-    border-radius: 50%;
-    margin-right: 15px;
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
 .old-cmnt h3{
-    font-size: 14px;
-    margin-bottom: 2px;
+    font-size: 14px;
+    margin-bottom: 2px;
 }
 
 .old-cmnt h3 span{
-    font-size: 12px;
-    color: #5a5a5a;
-    font-weight: 500;
-    margin-left: 8px;
+    font-size: 12px;
+    color: #5a5a5a;
+    font-weight: 500;
+    margin-left: 8px;
 }
 
 .old-cmnt .cmnt-react{
-    display: flex;
-    align-items: center;
-    margin:8px 0;
-    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin:8px 0;
+    font-size: 14px;
 }
 
 .old-cmnt .cmnt-react img{
 
-    width: 20px;
-    border-radius: 0;
-    margin-right: 5px;
+    width: 20px;
+    border-radius: 0;
+    margin-right: 5px;
 }
 
 .old-cmnt .cmnt-react span{
-    margin-right: 20px;
-    color: #5a5a5a;
+    margin-right: 20px;
+    color: #5a5a5a;
 
 }
 
 .old-cmnt .cmnt-react div{
-    color: blue;
-    display: block;
+    color: blue;
+    display: block;
 }
 .hide-hr{
-    display: none;
+    display: none;
 }
 @media (max-width: 900px){
 
-    .play-video{
-        flex-basis: 100%;
-    }
+    .play-video{
+        flex-basis: 100%;
+    }
 
 
-    .right-sidebar{
-        flex-basis: 100%;
-        margin-top: 35px;
-    }
+    .right-sidebar{
+        flex-basis: 100%;
+        margin-top: 35px;
+    }
 
-    .play-container{
-        padding-left: 5%;
-    }
+    .play-container{
+        padding-left: 5%;
+    }
 
-    .vid-des {
-        padding-left: 5px;
-    }
- 
-    .play-video .play-video-info a{
-        margin-left: 0;
-        margin-right: 15px;
-        margin-top: 15px;
-    }
-    
-    .hide-hr{
-        display: block;
-    }
+    .vid-des {
+        padding-left: 5px;
+    }
+ 
+    .play-video .play-video-info a{
+        margin-left: 0;
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+    
+    .hide-hr{
+        display: block;
+    }
 
 }
-  </style>
+  </style>
 </head>
 <body>
 
-  <!-- Top nav -->
-  <nav class="flex-div">
-    <div class="nav-left flex-div">
-      
-      <img src="https://stenoip.github.io/luddiele/luddiel_logo.png" class="logo" alt="Lûddiele">
-    </div>
-    <div class="nav-middle flex-div">
-      <div class="search-box flex-div">
-        <input id="searchInput" type="text" placeholder="Search Lûddiele…">
-        <img src="https://svgshare.com/i/14S8.svg" alt="Search">
-      </div>
-      <img src="https://svgshare.com/i/14RY.svg" class="mic-icon" alt="Mic">
-    </div>
-    <div class="nav-right flex-div">
-      <img src="https://svgshare.com/i/14QZ.svg" alt="Upload" id="openUpload">
-      <img src="https://svgshare.com/i/14RA.svg" alt="Notifications">
-      <img src="https://api.dicebear.com/8.x/initials/svg?seed=L" class="user-icon" id="userIcon" alt="User">
-    </div>
-  </nav>
+    <nav class="flex-div">
+    <div class="nav-left flex-div">
+      
+      <img src="https://stenoip.github.io/luddiele/luddiel_logo.png" class="logo" alt="Lûddiele">
+    </div>
+    <div class="nav-middle flex-div">
+      <div class="search-box flex-div">
+        <input id="searchInput" type="text" placeholder="Search Lûddiele…">
+        <img src="https://svgshare.com/i/14S8.svg" alt="Search">
+      </div>
+      <img src="https://svgshare.com/i/14RY.svg" class="mic-icon" alt="Mic">
+    </div>
+    <div class="nav-right flex-div">
+      <img src="https://svgshare.com/i/14QZ.svg" alt="Upload" id="openUpload">
+      <img src="https://svgshare.com/i/14RA.svg" alt="Notifications">
+      <img src="https://api.dicebear.com/8.x/initials/svg?seed=L" class="user-icon" id="userIcon" alt="User">
+    </div>
+  </nav>
 
-  <!-- Sidebar -->
-  <div class="sidebar" id="sidebar">
-    <div class="shortcut-links">
-      <a href="#"><img src="https://svgshare.com/i/14Sm.svg" alt=""><p>Home</p></a>
-      <a href="#"><img src="https://svgshare.com/i/14Si.svg" alt=""><p>Explore</p></a>
-      <a href="#"><img src="https://svgshare.com/i/14Sn.svg" alt=""><p>Audio</p></a>
-      <a href="#"><img src="https://svgshare.com/i/14Sd.svg" alt=""><p>Video</p></a>
-    </div>
-    <hr>
-    <div class="subscribed-list">
-      <h3>Creators</h3>
-      <a href="#"><img src="https://api.dicebear.com/8.x/initials/svg?seed=A" alt=""><p>Ally</p></a>
-      <a href="#"><img src="https://api.dicebear.com/8.x/initials/svg?seed=F" alt=""><p>FryskFan</p></a>
-    </div>
-  </div>
+    <div class="sidebar" id="sidebar">
+    <div class="shortcut-links">
+      <a href="#"><img src="https://svgshare.com/i/14Sm.svg" alt=""><p>Home</p></a>
+      <a href="#"><img src="https://svgshare.com/i/14Si.svg" alt=""><p>Explore</p></a>
 
-  <!-- Main container -->
-  <div class="container">
-    <!-- Upload bar -->
-    <div class="flex-div" style="gap:12px; background:#fff; padding:12px; border:1px solid #eee; border-radius:8px;">
-      <input id="displayName" type="text" placeholder="Your display name" style="padding:8px 12px; border:1px solid #ccc; border-radius:6px;">
-      <input id="caption" type="text" placeholder="Caption (e.g., A morning soundwalk in Brooklyn)" style="padding:8px 12px; border:1px solid #ccc; border-radius:6px; flex:1;">
-      <input id="file" type="file" accept="video/*,audio/*" style="padding:8px; border:1px solid #ccc; border-radius:6px;">
-      <button id="uploadBtn" style="background:#ed3833; color:#fff; border:0; border-radius:6px; padding:10px 14px; cursor:pointer;">Upload & Post</button>
-      <span id="uploadStatus" style="color:#5a5a5a; font-size:12px;"></span>
-    </div>
+    </div>
+    <hr>
 
-    <!-- Feed grid -->
-    <div class="list-container" id="feed"></div>
+  </div>
 
-    <!-- Play view -->
-    <div class="play-container" id="playView" style="display:none;">
-      <div class="row">
-        <div class="play-video" id="playVideoPane">
-          <video id="playVideo" controls></video>
-          <audio id="playAudio" controls style="width:100%; display:none;"></audio>
+    <div class="container">
+        <div class="flex-div" style="gap:12px; background:#fff; padding:12px; border:1px solid #eee; border-radius:8px;">
+      <input id="displayName" type="text" placeholder="Your display name" style="padding:8px 12px; border:1px solid #ccc; border-radius:6px;">
+      <input id="caption" type="text" placeholder="Caption (e.g., A morning soundwalk in Brooklyn)" style="padding:8px 12px; border:1px solid #ccc; border-radius:6px; flex:1;">
+      <input id="file" type="file" accept="video/*,audio/*" style="padding:8px; border:1px solid #ccc; border-radius:6px;">
+      <button id="uploadBtn" style="background:#ed3833; color:#fff; border:0; border-radius:6px; padding:10px 14px; cursor:pointer;">Upload & Post</button>
+      <span id="uploadStatus" style="color:#5a5a5a; font-size:12px;"></span>
+    </div>
 
-          <div class="tags" id="playTags">
-            <a href="#">#Lûddiele</a> <a href="#">#Share</a>
-          </div>
+        <div class="list-container" id="feed"></div>
 
-          <h3 id="playTitle">(no caption)</h3>
+        <div class="play-container" id="playView" style="display:none;">
+      <div class="row">
+        <div class="play-video" id="playVideoPane">
+          <video id="playVideo" controls></video>
+          <audio id="playAudio" controls style="width:100%; display:none;"></audio>
 
-          <div class="play-video-info">
-            <div id="playMeta">author • time</div>
-            <div class="flex-div">
-              <a href="#" id="likeAction"><img src="https://svgshare.com/i/14QZ.svg" alt="">Like</a>
-              <a href="#" id="closePlay"><img src="https://svgshare.com/i/14QY.svg" alt="">Close</a>
-            </div>
-          </div>
+          <div class="tags" id="playTags">
+            <a href="#">#Lûddiele</a> <a href="#">#Share</a>
+          </div>
 
-          <hr class="hide-hr">
+          <h3 id="playTitle">(no caption)</h3>
 
-          <div class="owner">
-            <img id="ownerAvatar" src="" alt="">
-            <div>
-              <p id="ownerName">guest</p>
-              <span>Creator</span>
-            </div>
-            <button disabled>Follow</button>
-          </div>
+          <div class="play-video-info">
+            <div id="playMeta"></div>
+            <div class="flex-div">
+              <a href="#" id="likeAction"><img src="https://svgshare.com/i/14QZ.svg" alt=""></a>
+              <a href="#" id="closePlay"><img src="https://svgshare.com/i/14QY.svg" alt="">Close</a>
+            </div>
+          </div>
 
-          <div class="vid-des">
-            <p id="playDesc">No description provided.</p>
-            <h4>Comments</h4>
+          <hr class="hide-hr">
 
-            <div class="add-cmnt">
-              <img id="meAvatar" src="" alt="">
-              <input id="commentInput" type="text" placeholder="Add a comment…">
-            </div>
+       
+          <div class="vid-des">
+            <p id="playDesc">Loading post details...</p>
+            <h4>Comments (Not implemented in backend)</h4>
 
-            <div id="comments"></div>
-          </div>
-        </div>
+            <div class="add-cmnt">
+              <img id="meAvatar" src="https://api.dicebear.com/8.x/initials/svg?seed=L" alt="">
+              <input id="commentInput" type="text" placeholder="Add a comment…">
+            </div>
 
-        <div class="right-sidebar">
-          <h4 style="color:#5a5a5a;">More from Lûddiele</h4>
-          <div id="sideList"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+            <div id="comments"></div>
+          </div>
+        </div>
 
-  <script>
-    // Configure your deployed API base
-    const API_BASE = 'https://luddiele.vercel.app';
+        <div class="right-sidebar">
+          <h4 style="color:#5a5a5a;">More from Lûddiele</h4>
+          <div id="sideList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    // Basic session
-    const session = {
-      id: localStorage.getItem('lud_sess_id') || crypto.randomUUID(),
-      name: localStorage.getItem('lud_name') || 'guest'
-    };
-    localStorage.setItem('lud_sess_id', session.id);
-    document.getElementById('displayName').value = session.name;
+  <script>
+   // --- Configuration ---
+   // ⚠️ UPDATE THIS URL after you deploy your Flask backend to Render!
+   const API_BASE = 'https://luddiele-backend-placeholder.onrender.com'; 
+   
+   const feedContainer = document.getElementById('feed');
+   const playView = document.getElementById('playView');
+   const mainContainer = document.querySelector('.container');
+   const uploadBtn = document.getElementById('uploadBtn');
+   const fileInput = document.getElementById('file');
+   const displayNameInput = document.getElementById('displayName');
+   const captionInput = document.getElementById('caption');
+   const uploadStatus = document.getElementById('uploadStatus');
 
-    // UI hooks
-    const feedEl = document.getElementById('feed');
-    const playView = document.getElementById('playView');
-    const playVideo = document.getElementById('playVideo');
-    const playAudio = document.getElementById('playAudio');
-    const playTitle = document.getElementById('playTitle');
-    const playMeta = document.getElementById('playMeta');
-    const ownerAvatar = document.getElementById('ownerAvatar');
-    const ownerName = document.getElementById('ownerName');
-    const playDesc = document.getElementById('playDesc');
-    const commentsEl = document.getElementById('comments');
-    const sideList = document.getElementById('sideList');
-    const likeAction = document.getElementById('likeAction');
-    const meAvatar = document.getElementById('meAvatar');
-    const searchInput = document.getElementById('searchInput');
+   // --- Utility Functions ---
+   function updateStatus(message, color = '#5a5a5a') {
+        uploadStatus.textContent = message;
+        uploadStatus.style.color = color;
+   }
+   
+   function timeSince(dateString) {
+        const seconds = Math.floor((new Date() - new Date(dateString)) / 1000);
+        let interval = seconds / 31536000;
+        
+        if (interval > 1) return Math.floor(interval) + " years ago";
+        interval = seconds / 2592000;
+        if (interval > 1) return Math.floor(interval) + " months ago";
+        interval = seconds / 86400;
+        if (interval > 1) return Math.floor(interval) + " days ago";
+        interval = seconds / 3600;
+        if (interval > 1) return Math.floor(interval) + " hours ago";
+        interval = seconds / 60;
+        if (interval > 1) return Math.floor(interval) + " minutes ago";
+        return Math.floor(seconds) + " seconds ago";
+   }
 
-    // Avatars
-    const avatarFor = (name) => `https://api.dicebear.com/8.x/initials/svg?seed=${encodeURIComponent(name||'guest')}`;
-    meAvatar.src = avatarFor(session.name);
-    document.getElementById('userIcon').addEventListener('click', () => {
-      const name = prompt('Choose a display name:')?.trim();
-      if (!name) return;
-      session.name = name.slice(0, 64);
-      localStorage.setItem('lud_name', session.name);
-      document.getElementById('displayName').value = session.name;
-      meAvatar.src = avatarFor(session.name);
-    });
-
-    // Sidebar toggle
-    document.querySelector('.menu-icon')?.addEventListener('click', () => {
-      document.getElementById('sidebar').classList.toggle('small-sidebar');
-    });
-
-    // Upload flow
-    document.getElementById('uploadBtn').addEventListener('click', async () => {
-      const status = document.getElementById('uploadStatus');
-      status.textContent = '';
-      try {
-        const fileEl = document.getElementById('file');
-        if (!fileEl.files.length) return alert('Pick a media file first.');
-        const file = fileEl.files[0];
-        const author = (document.getElementById('displayName').value.trim() || 'guest').slice(0,64);
-        const caption = document.getElementById('caption').value.trim();
-
-        status.textContent = 'Requesting upload URL…';
-        const upRes = await fetch(API_BASE + '/api/create-upload-url', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ filename: file.name, contentType: file.type })
-        });
-        if (!upRes.ok) throw new Error('Could not get upload URL');
-        const { uploadUrl, blobUrl } = await upRes.json();
-
-        status.textContent = 'Uploading media…';
-        const fd = new FormData();
-        fd.append('file', file);
-        const blobRes = await fetch(uploadUrl, { method: 'POST', body: fd });
-        if (!blobRes.ok) throw new Error('Upload failed');
-
-        status.textContent = 'Creating post…';
-        const create = await fetch(API_BASE + '/api/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            sessionId: session.id,
-            author,
-            caption,
-            mediaUrl: blobUrl,
-            mediaType: file.type
-          })
-        });
-        if (!create.ok) throw new Error('Post creation failed');
-
-        document.getElementById('caption').value = '';
-        fileEl.value = '';
-        status.textContent = 'Posted!';
-        await loadFeed();
-        setTimeout(() => status.textContent = '', 1200);
-      } catch (e) {
-        console.error(e);
-        status.textContent = 'Error: ' + e.message;
-      }
-    });
-
-    // Feed loading + render
-    let currentPost = null;
-    async function loadFeed(query='') {
-      feedEl.innerHTML = '<div style="color:#5a5a5a;">Loading…</div>';
-      const res = await fetch(API_BASE + '/api/feed');
-      const data = await res.json();
-      const posts = data.posts.filter(p => (p.caption||'').toLowerCase().includes(query.toLowerCase()) || (p.author||'').toLowerCase().includes(query.toLowerCase()));
-      feedEl.innerHTML = '';
-      posts.forEach(p => feedEl.appendChild(renderCard(p)));
-      // side list
-      sideList.innerHTML = '';
-      posts.slice(0,6).forEach(p => sideList.appendChild(renderSideItem(p)));
+   function formatNumber(num) {
+        if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+        if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+        return num;
     }
 
-    function renderCard(p) {
-      const item = document.createElement('div');
-      item.className = 'vid-list';
-      // media thumbnail
-      const thumb = document.createElement('div');
-      const isAudio = (p.media_type||'').startsWith('audio/');
-      if (isAudio) {
-        const tile = document.createElement('div');
-        tile.className = 'thumbnail';
-        tile.style.height = '140px';
-        tile.style.background = '#eee';
-        tile.style.display = 'flex';
-        tile.style.alignItems = 'center';
-        tile.style.justifyContent = 'center';
-        tile.textContent = 'Audio ▶';
-        tile.style.fontWeight = '600';
-        tile.style.color = '#333';
-        tile.addEventListener('click', () => openPlay(p));
-        thumb.appendChild(tile);
-      } else {
-        const video = document.createElement('video');
-        video.className = 'thumbnail';
-        video.src = p.media_url;
-        video.muted = true;
-        video.preload = 'metadata';
-        video.addEventListener('mouseenter', () => video.play().catch(()=>{}));
-        video.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
-        video.addEventListener('click', () => openPlay(p));
-        thumb.appendChild(video);
-      }
-      item.appendChild(thumb);
 
-      // info row
-      const infoRow = document.createElement('div');
-      infoRow.className = 'flex-div';
-      const avatar = document.createElement('img');
-      avatar.src = avatarFor(p.author);
-      const info = document.createElement('div');
-      info.className = 'vid-info';
-      info.innerHTML = `
-        <a href="#">${escapeHtml(p.caption || '(no caption)')}</a>
-        <p>${escapeHtml(p.author)} • ${new Date(p.created_at).toLocaleString()}</p>
-        <p> ${p.likes_count}</p>
-      `;
-      infoRow.appendChild(avatar);
-      infoRow.appendChild(info);
-      item.appendChild(infoRow);
-      return item;
+   // --- Render Functions ---
+
+   function renderFeedItem(post) {
+        const avatarUrl = `https://api.dicebear.com/8.x/initials/svg?seed=${post.author.trim()}`;
+        const mediaUrl = `${API_BASE}/api/media/${post.filename}`;
+
+        // Use a standard image URL for the thumbnail
+        const thumbnailUrl = post.is_audio 
+            ? 'https://svgshare.com/i/14W7.svg' // Simple audio icon placeholder
+            : mediaUrl; // For videos, use the video itself (or a separate thumbnail if available)
+
+        const html = `
+            <div class="vid-list" data-id="${post.id}">
+                <img src="${thumbnailUrl}" class="thumbnail" alt="Thumbnail" data-media-url="${mediaUrl}" data-is-audio="${post.is_audio}">
+                <div class="flex-div">
+                    <img src="${avatarUrl}" alt="Author Avatar">
+                    <div class="vid-info">
+                        <a href="#" data-id="${post.id}">${post.caption || '(no caption)'}</a>
+                        <p>${post.author}</p>
+                        <p>${formatNumber(post.views || 0)} views &bull; ${timeSince(post.timestamp)}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        feedContainer.insertAdjacentHTML('beforeend', html);
+    }
+
+    function updatePlayVideoPane(post) {
+        const videoElement = document.getElementById('playVideo');
+        const audioElement = document.getElementById('playAudio');
+        const likeAction = document.getElementById('likeAction');
+        const playMeta = document.getElementById('playMeta');
+
+        const mediaUrl = `${API_BASE}/api/media/${post.filename}`;
+
+        if (post.is_audio) {
+            videoElement.style.display = 'none';
+            audioElement.style.display = 'block';
+            audioElement.src = mediaUrl;
+        } else {
+            audioElement.style.display = 'none';
+            videoElement.style.display = 'block';
+            videoElement.src = mediaUrl;
+        }
+
+        document.getElementById('playTitle').textContent = post.caption || '(no caption)';
+        document.getElementById('playDesc').textContent = `Posted by ${post.author} at ${new Date(post.timestamp).toLocaleDateString()}.`;
+        
+        // Update meta info and like count
+        playMeta.textContent = `${formatNumber(post.views)} views &bull; ${formatNumber(post.likes)} likes &bull; ${timeSince(post.timestamp)}`;
+        
+        // Update like button text/count
+        likeAction.innerHTML = `<img src="https://svgshare.com/i/14QZ.svg" alt="">Like (${formatNumber(post.likes)})`;
+        likeAction.dataset.postId = post.id;
     }
 
-    function renderSideItem(p) {
-      const row = document.createElement('div');
-      row.className = 'side-video-list';
-      const left = document.createElement('div');
-      left.className = 'small-thumbnail';
-      const isAudio = (p.media_type||'').startsWith('audio/');
-      if (isAudio) {
-        const tile = document.createElement('div');
-        tile.style.height = '70px';
-        tile.style.background = '#eee';
-        tile.style.display = 'flex';
-        tile.style.alignItems = 'center';
-        tile.style.justifyContent = 'center';
-        tile.style.borderRadius = '6px';
-        tile.textContent = 'Audio ▶';
-        tile.style.fontSize = '12px';
-        tile.addEventListener('click', () => openPlay(p));
-        left.appendChild(tile);
-      } else {
-        const video = document.createElement('video');
-        video.src = p.media_url;
-        video.muted = true;
-        video.preload = 'metadata';
-        video.style.borderRadius = '6px';
-        video.addEventListener('click', () => openPlay(p));
-        left.appendChild(video);
-      }
-      const right = document.createElement('div');
-      right.className = 'vid-info';
-      right.innerHTML = `
-        <a href="#">${escapeHtml(p.caption || '(no caption)')}</a>
-        <p>${escapeHtml(p.author)}</p>
-      `;
-      row.appendChild(left);
-      row.appendChild(right);
-      return row;
+
+   // --- API Functions ---
+   
+   async function fetchFeed() {
+        feedContainer.innerHTML = 'Loading feed...';
+        try {
+            const response = await fetch(`${API_BASE}/api/feed`);
+            if (!response.ok) throw new Error('Failed to fetch feed data.');
+            const posts = await response.json();
+
+            feedContainer.innerHTML = ''; // Clear loading message
+            posts.forEach(renderFeedItem);
+
+            // Render side list with the same posts
+            const sideList = document.getElementById('sideList');
+            sideList.innerHTML = '';
+            posts.slice(0, 10).forEach(post => { // Show top 10 as suggested videos
+                const avatarUrl = `https://api.dicebear.com/8.x/initials/svg?seed=${post.author.trim()}`;
+                const mediaUrl = `${API_BASE}/api/media/${post.filename}`;
+                const thumbnailUrl = post.is_audio ? 'https://svgshare.com/i/14W7.svg' : mediaUrl; 
+
+                const sideHtml = `
+                    <div class="side-video-list" data-id="${post.id}">
+                        <a href="#" class="small-thumbnail" data-id="${post.id}">
+                            <img src="${thumbnailUrl}" alt="Thumbnail">
+                        </a>
+                        <div class="vid-info">
+                            <a href="#" data-id="${post.id}">${post.caption || '(no caption)'}</a>
+                            <p>${post.author}</p>
+                            <p>${formatNumber(post.views)} views</p>
+                        </div>
+                    </div>
+                `;
+                sideList.insertAdjacentHTML('beforeend', sideHtml);
+            });
+
+
+        } catch (error) {
+            console.error('Error fetching feed:', error);
+            feedContainer.innerHTML = `<p style="color:red;">Error loading feed. Check API_BASE URL and backend deployment.</p>`;
+        }
+    }
+
+    async function fetchPostAndPlay(postId) {
+        try {
+            const response = await fetch(`${API_BASE}/api/post/${postId}`);
+            if (!response.ok) throw new Error('Post not found.');
+            const post = await response.json();
+            
+            // 1. Hide feed, show player
+            feedContainer.style.display = 'none';
+            playView.style.display = 'block';
+            mainContainer.classList.add('large-container');
+
+            // 2. Populate player with data
+            updatePlayVideoPane(post);
+
+            // 3. Pause video if navigating away
+            const videoElement = document.getElementById('playVideo');
+            const audioElement = document.getElementById('playAudio');
+            document.getElementById('closePlay').onclick = () => {
+                videoElement.pause();
+                audioElement.pause();
+                feedContainer.style.display = 'grid';
+                playView.style.display = 'none';
+                mainContainer.classList.remove('large-container');
+                fetchFeed(); // Re-fetch feed to update view/like counts
+            };
+
+        } catch (error) {
+            console.error('Error fetching and playing post:', error);
+            alert('Could not load the selected post.');
+            // Fallback to home view
+            feedContainer.style.display = 'grid';
+            playView.style.display = 'none';
+        }
     }
 
-    function openPlay(p) {
-      currentPost = p;
-      document.querySelector('.container').classList.add('large-container');
-      playView.style.display = 'block';
-      // media
-      const isAudio = (p.media_type||'').startsWith('audio/');
-      if (isAudio) {
-        playVideo.style.display = 'none';
-        playVideo.pause();
-        playAudio.style.display = 'block';
-        playAudio.src = p.media_url;
-      } else {
-        playAudio.style.display = 'none';
-        playAudio.pause();
-        playVideo.style.display = 'block';
-        playVideo.src = p.media_url;
-      }
-      // meta
-      playTitle.textContent = p.caption || '(no caption)';
-      playMeta.textContent = `${p.author} • ${new Date(p.created_at).toLocaleString()}`;
-      ownerAvatar.src = avatarFor(p.author);
-      ownerName.textContent = p.author;
-      playDesc.textContent = p.caption || '';
-      // like button
-      likeAction.onclick = async (e) => {
+    async function handleLikeAction(postId) {
+        try {
+            const response = await fetch(`${API_BASE}/api/like/${postId}`, {
+                method: 'POST'
+            });
+
+            if (!response.ok) throw new Error('Failed to like post.');
+
+            // Re-fetch the post data to update the likes count without refreshing the whole page
+            const postResponse = await fetch(`${API_BASE}/api/post/${postId}`);
+            if (!postResponse.ok) throw new Error('Failed to get updated post data.');
+            const post = await postResponse.json();
+            
+            // Update the display with new data
+            updatePlayVideoPane(post);
+
+        } catch (error) {
+            console.error('Like failed:', error);
+            alert('Failed to register like.');
+        }
+    }
+
+
+   // --- Event Listeners ---
+   
+   // 1. Upload Handler
+   uploadBtn.addEventListener('click', async () => {
+        const file = fileInput.files[0];
+        const author = displayNameInput.value.trim() || 'Anonymous';
+        const caption = captionInput.value.trim();
+
+        if (!file) {
+            updateStatus('Please select an audio or video file.', 'red');
+            return;
+        }
+
+        updateStatus('Uploading… Please wait.', 'blue');
+        uploadBtn.disabled = true;
+
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('author', author);
+        formData.append('caption', caption);
+
+        const uploadURL = `${API_BASE}/api/post`;
+
+        try {
+            const response = await fetch(uploadURL, {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                updateStatus(`Upload successful! Post ID: ${result.id}`, 'green');
+                fileInput.value = '';
+                captionInput.value = '';
+                displayNameInput.value = author; // Keep author name
+                fetchFeed(); // Refresh the feed after successful upload
+                setTimeout(() => updateStatus(''), 5000);
+            } else {
+                const errorMessage = result.error || 'Unknown API Error';
+                updateStatus(`Upload failed: ${errorMessage}`, 'red');
+            }
+        } catch (error) {
+            console.error('Network or CORS error:', error);
+            updateStatus('Upload failed: Could not connect to the server.', 'red');
+        } finally {
+            uploadBtn.disabled = false;
+        }
+    });
+
+    // 2. Global Click Handler for Playback/Navigation
+    document.addEventListener('click', (e) => {
+        const postId = e.target.closest('[data-id]')?.dataset.id;
+        if (postId) {
+            e.preventDefault(); // Stop navigation
+            fetchPostAndPlay(postId);
+        }
+    });
+
+    // 3. Like Button Handler
+    document.getElementById('likeAction').addEventListener('click', (e) => {
         e.preventDefault();
-        await fetch(API_BASE + '/api/like', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ postId: p.id, sessionId: session.id })
-        });
-        await loadFeed(searchInput.value);
-        const fresh = (await (await fetch(API_BASE + '/api/feed')).json()).posts.find(x => x.id === p.id);
-        if (fresh) currentPost = fresh;
-      };
-      // comments
-      commentsEl.innerHTML = '';
-      (p.comments || []).forEach(c => {
-        const item = document.createElement('div');
-        item.className = 'old-cmnt';
-        item.innerHTML = `
-          <img src="${avatarFor(c.author)}" alt="">
-          <div>
-            <h3>${escapeHtml(c.author)} <span>${new Date(c.created_at).toLocaleString()}</span></h3>
-            <p>${escapeHtml(c.text)}</p>
-            <div class="cmnt-react">
-              <img src="https://svgshare.com/i/14QZ.svg" alt=""><span>Like</span>
-              <img src="https://svgshare.com/i/14QY.svg" alt=""><span>Reply</span>
-            </div>
-          </div>
-        `;
-        commentsEl.appendChild(item);
-      });
-    }
-
-    document.getElementById('closePlay').addEventListener('click', (e) => {
-      e.preventDefault();
-      playView.style.display = 'none';
-      playVideo.pause(); playAudio.pause();
-      document.querySelector('.container').classList.remove('large-container');
-      currentPost = null;
+        const postId = e.currentTarget.dataset.postId;
+        if (postId) {
+            handleLikeAction(postId);
+        }
     });
 
-    // Add comment
-    document.getElementById('commentInput').addEventListener('keydown', async (e) => {
-      if (e.key === 'Enter' && currentPost) {
-        const text = e.target.value.trim();
-        if (!text) return;
-        await fetch(API_BASE + '/api/comment', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ postId: currentPost.id, author: session.name, text })
-        });
-        e.target.value = '';
-        await loadFeed(searchInput.value);
-        const fresh = (await (await fetch(API_BASE + '/api/feed')).json()).posts.find(x => x.id === currentPost.id);
-        if (fresh) openPlay(fresh);
-      }
-    });
 
-    // Search
-    searchInput.addEventListener('input', () => loadFeed(searchInput.value));
-
-    // Upload icon opens file chooser
-    document.getElementById('openUpload').addEventListener('click', () => document.getElementById('file').click());
-
-    // Helpers
-    function escapeHtml(str) {
-      return (str||'').replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
-    }
-
-    // Initial load
-    loadFeed();
-  </script>
+   // --- Initial Load ---
+   // Fetch and display the feed when the page loads
+   document.addEventListener('DOMContentLoaded', fetchFeed);
+  </script>
 </body>
 </html>
