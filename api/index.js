@@ -17,7 +17,8 @@ function hasRequiredFields(body, fields) {
 }
 
 export default async function handler(req, res) {
-  var { pathname } = new URL(req.url);
+  var pathname = req.url.split("?")[0]; // strip query params if present
+
 
   res.setHeader("Access-Control-Allow-Origin", "https://stenoip.github.io");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
