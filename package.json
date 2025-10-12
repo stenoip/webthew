@@ -2,6 +2,7 @@
   "name": "luddiele-backend",
   "version": "1.0.0",
   "description": "Vercel serverless backend for Luddiele",
+  "type": "module",
   "main": "api/index.js",
   "scripts": {
     "start": "node api/index.js"
