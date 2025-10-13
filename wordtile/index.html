@@ -2,16 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Wordtile — Coming Soon</title>
-</head>
+  <title>Wordtile — Share Your Words</title>
+  </head>
 <body>
   <h1>Wordtile</h1>
-  <h2>Coming Soon</h2>
-  <p>Wordtile is a place where users share text(like a forum). The name is a modern Anglicised blend of German roots: Wort meaning "word" and Teilen meaning "to share." It shows the idea of a word-part or the sharing of a word.</p>
-  <p>Pronounced WORT-ile (rhymes with "short mile"), IPA: /wɔːrˈtaɪl/, it has the  German 'ei' sound for a unique sound.</p>
-  <p>Inspired by linguistic forms like participles and morphemes, Wordtile shows the beauty of language in motion, where all words are vital infomation. Infomation is the internet.</p>
-  
-  <p>Wortile will be coded with HTML, CSS, JS and Python</p>
-  <p>&copy; 2025 Stenoip Company</p>
+
+  <h2>Share Your Word-Part</h2>
+  <form method="POST" action="/">
+    <textarea name="content" rows="4" cols="50" placeholder="Type your text, link, or thought here..."></textarea><br>
+    <button type="submit">Share</button>
+  </form>
+
+  <hr>
+
+  <h2>Shared Words</h2>
+  {% if posts %}
+    {% for post in posts %}
+      <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+        <p><strong>Content:</strong> {{ post.content }}</p>
+        <p style="font-size: small; color: gray;">
+          Shared on: {{ post.timestamp.strftime('%Y-%m-%d at %H:%M') }}
+        </p>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>Be the first to share a word-part!</p>
+  {% endif %}
+
+  <hr>
+
+  <p>Wordtile is a place where users share text(like a forum). The name is a modern Anglicised blend of German roots: Wort meaning "word" and Teilen meaning "to share." It shows the idea of a word-part or the sharing of a word.</p>
+  <p>Pronounced WORT-ile (rhymes with "short mile"), IPA: /wɔːrˈtaɪl/, it has the German 'ei' sound for a unique sound.</p>
+  <p>Inspired by linguistic forms like participles and morphemes, Wordtile shows the beauty of language in motion, where all words are vital infomation. Infomation is the internet.</p>
+  <p>Wortile will be coded with HTML, CSS, JS and Python</p>
+  <p>&copy; 2025 Stenoip Company</p>
 </body>
 </html>
