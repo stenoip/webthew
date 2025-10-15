@@ -6,16 +6,23 @@ import os
 # --- Configuration ---
 app = Flask(__name__)
 
-# CONFIGURE DATABASE FOR RENDER
-# Uses the DATABASE_URL environment variable on Render (PostgreSQL)
-# Falls back to local SQLite if the variable is not found (for Chromebook testing)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///wordtile.db').replace("postgres://", "postgresql://", 1)
+# 1. CONFIGURE DATABASE URI: 
+# Reads the DATABASE_URL environment variable (set by Render for PostgreSQL)
+# Falls back to local 'sqlite:///wordtile.db' for Chromebook testing.
+DB_URL = os.environ.get('DATABASE_URL', 'sqlite:///wordtile.db')
+
+# 2. ENSURE CORRECT DIALECT: 
+# Replaces 'postgres://' (sometimes used) with the required 'postgresql://' dialect prefix.
+if DB_URL.startswith('postgres://'):
+    DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
     
+app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-# NEW: Initialize the database tables immediately upon application startup.
-# This ensures tables are created on Render's Free Tier where the shell isn't available.
+# 3. DATABASE INITIALIZATION FOR RENDER FREE TIER:
+# Automatically creates the database tables when the application is loaded by Gunicorn.
+# This replaces the need for manual shell access.
 with app.app_context():
     db.create_all()
 
@@ -45,7 +52,10 @@ def index():
             except Exception as e:
                 db.session.rollback()
                 print(f"Error saving post: {e}")
-                return "There was an issue creating your post.", 500
+                # For debugging on Render, print the full error to the logs
+                import traceback
+                traceback.print_exc()
+                return "There was an issue creating your post. Check the server logs for details.", 500
         else:
             return redirect(url_for('index'))
 
@@ -55,8 +65,8 @@ def index():
 
 # --- Initializer (For Local Chromebook/Linux Run ONLY) ---
 if __name__ == '__main__':
-    # When run locally, the 'db.create_all()' above already runs, 
-    # but this block executes the local development server.
+    # The db.create_all() call above handles initialization.
+    # This block only starts the local development server.
     app.run(debug=True, host='0.0.0.0')
 
-# For Render deployment, Gunicorn runs 'wordtile.app:app' and executes the code outside of this block.
+# For Render, the Gunicorn process executes the code outside of this block.
